@@ -1,0 +1,150 @@
+.women {
+  position: relative;
+  display: inline-block;
+  min-width: 47px;
+}
+.womenWrapper {
+  height: 28px;
+  width: 69px;
+  border-radius: var(--br-81xl);
+  border: 1px solid var(--color-silver-200);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-9xs) var(--padding-3xs);
+}
+.starIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  min-height: 24px;
+}
+.kRating {
+  position: relative;
+  display: inline-block;
+  min-width: 81px;
+}
+.starIconParent {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+}
+.nameWrapper,
+.rating,
+.starIconParent {
+  display: flex;
+  align-items: flex-start;
+}
+.rating {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-12xs) 0 0;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-400);
+}
+.nameWrapper {
+  align-self: stretch;
+  height: 26px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  z-index: 2;
+}
+.aldo,
+.frenchKissBag {
+  position: relative;
+  font-weight: 600;
+  z-index: 2;
+}
+.aldo {
+  align-self: stretch;
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  color: var(--color-gray-100);
+}
+.frenchKissBagParent {
+  width: 192px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.priceLabel {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+  white-space: nowrap;
+  z-index: 2;
+}
+.priceWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-17xl) 0 0;
+  box-sizing: border-box;
+  min-width: 125px;
+}
+.addToCart1 {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 113px;
+}
+.addToCart,
+.addToCartWrapper,
+.productAction,
+.productName {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.addToCartWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xl) var(--padding-lg);
+  background-color: var(--color-gray-200);
+  border-radius: var(--br-base);
+  white-space: nowrap;
+}
+.addToCartWrapper:hover {
+  background-color: var(--color-dimgray);
+}
+.addToCart,
+.productAction,
+.productName {
+  align-self: stretch;
+  gap: var(--gap-42xl);
+}
+.productAction,
+.productName {
+  flex-direction: column;
+  gap: var(--gap-9xs);
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+}
+.productName {
+  gap: var(--gap-5xl);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-100);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 450px) {
+  .frenchKissBag,
+  .priceLabel {
+    font-size: var(--font-size-lgi);
+  }
+  .addToCart {
+    flex-wrap: wrap;
+    gap: var(--gap-11xl);
+  }
+}

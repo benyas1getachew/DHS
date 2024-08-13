@@ -1,0 +1,33 @@
+.more {
+  position: relative;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 77px;
+}
+.moreIconChild {
+  width: 17px;
+  height: 10px;
+  position: relative;
+}
+.moreIcon,
+.moreParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-6xs) 0 0;
+}
+.moreParent {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-2xs-5) var(--padding-13xl);
+  background-color: var(--color-gray-200);
+  border-radius: var(--br-5xs);
+  flex-direction: row;
+  gap: var(--gap-7xs);
+  opacity: 0.8;
+}

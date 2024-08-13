@@ -1,0 +1,229 @@
+.bags,
+.frameChild {
+  align-self: stretch;
+  position: relative;
+}
+.frameChild {
+  flex: 1;
+  border-radius: var(--br-base);
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.bags {
+  font-weight: 600;
+}
+.seeAllCollections {
+  position: relative;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+  text-align: left;
+}
+.categories {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-5xs);
+}
+.categories,
+.featuredItems,
+.frameParent {
+  display: flex;
+  justify-content: flex-start;
+}
+.frameParent {
+  height: 184px;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-base);
+}
+.featuredItems {
+  width: 209px;
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-5xl) var(--padding-12xl);
+}
+.ghostMannequinBeigeWomensPIcon {
+  position: absolute;
+  height: calc(100% - 4px);
+  top: 2px;
+  bottom: 2px;
+  left: 33px;
+  max-height: 100%;
+  width: 77px;
+  object-fit: cover;
+}
+.ghostMannequinBeigeWomensPWrapper {
+  width: 143px;
+  height: 100px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.featuredItems1,
+.jacketsParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.jacketsParent {
+  width: 143px;
+  gap: var(--gap-5xs);
+}
+.featuredItems1 {
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  padding: var(--padding-5xl) var(--padding-12xl);
+  gap: var(--gap-base);
+}
+.images3Icon,
+.images4Icon,
+.pngtreeWomenHatPngImage52Icon {
+  position: absolute;
+  height: calc(100% - 16px);
+  top: 8px;
+  bottom: 8px;
+  left: 43px;
+  max-height: 100%;
+  width: 56px;
+  object-fit: cover;
+}
+.images4Icon,
+.pngtreeWomenHatPngImage52Icon {
+  height: calc(100% - 12px);
+  top: 6px;
+  bottom: 6px;
+  left: 28px;
+  width: 88px;
+}
+.pngtreeWomenHatPngImage52Icon {
+  height: calc(100% - 6px);
+  top: 3px;
+  bottom: 3px;
+  left: 24px;
+  width: 94px;
+}
+.pngtreeWomenHatPngImage52Wrapper {
+  align-self: stretch;
+  height: 100px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.hatsParent {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.featuredItems4,
+.frameGroup,
+.hatsParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameGroup {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.featuredItems4 {
+  width: 209px;
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: var(--padding-5xl) var(--padding-12xl);
+}
+.nmtoe2KlSl1500838011Icon,
+.wigs1Icon {
+  position: absolute;
+  height: calc(100% - 10px);
+  top: 5px;
+  bottom: 5px;
+  left: 37px;
+  max-height: 100%;
+  width: 68px;
+  object-fit: cover;
+}
+.nmtoe2KlSl1500838011Icon {
+  height: calc(100% - 24px);
+  top: 12px;
+  bottom: 12px;
+  left: 33px;
+  width: 76px;
+}
+.nmtoe2KlSl1500838011Wrapper {
+  height: 100px;
+  flex: 1;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+}
+.frameWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0 0 var(--padding-5xs);
+}
+.featuredGrid,
+.frameDiv,
+.frameWrapper {
+  justify-content: flex-start;
+}
+.frameDiv {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-5xs);
+}
+.featuredGrid {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px 23.6px;
+  min-height: 504px;
+}
+.featuredCategories,
+.featuredGrid,
+.moreCategories {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+}
+.moreCategories {
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.featuredCategories {
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-21xl);
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 825px) {
+  .featuredCategories {
+    gap: var(--gap-xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .bags {
+    font-size: var(--font-size-lgi);
+  }
+}

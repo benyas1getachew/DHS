@@ -1,0 +1,352 @@
+.frameChild {
+  width: 439px;
+  height: 501px;
+  position: relative;
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  box-sizing: border-box;
+  display: none;
+  max-width: 100%;
+}
+.productWrapperIcon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  margin: 0 !important;
+  top: 16px;
+  left: 16px;
+  border-radius: var(--br-9981xl);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.d69120edd5c8b1e2c140e4dc7f254eIcon {
+  height: 258px;
+  width: 227px;
+  position: relative;
+  object-fit: cover;
+}
+.inStock {
+  position: relative;
+  display: inline-block;
+  min-width: 47px;
+}
+.stockStatus {
+  border-radius: var(--br-81xl);
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-5xs) var(--padding-3xs);
+  white-space: nowrap;
+}
+.productDetails {
+  flex-direction: column;
+  padding: var(--padding-lgi) 0 0;
+}
+.productDetails,
+.productWrapperParent,
+.rectangleParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.productWrapperParent {
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  flex-direction: row;
+  padding: 0 var(--padding-base) 0 var(--padding-69xl);
+  position: relative;
+  gap: var(--gap-8xs);
+  z-index: 2;
+}
+.rectangleParent {
+  width: 439px;
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-base);
+  gap: var(--gap-base);
+  max-width: 100%;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.oejshhpylSy6252Icon {
+  width: 213px;
+  height: 213px;
+  position: relative;
+  object-fit: cover;
+}
+.oejshhpylSy6252Wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) 0 0;
+}
+.brown92Icon,
+.frameParent {
+  position: relative;
+  overflow: hidden;
+}
+.frameParent {
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-lgi) var(--padding-base) var(--padding-4xl)
+    var(--padding-76xl);
+  gap: var(--gap-xs);
+  z-index: 2;
+}
+.brown92Icon {
+  align-self: stretch;
+  height: 202px;
+  max-width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.brown92Wrapper,
+.frameGroup,
+.womenWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.brown92Wrapper {
+  flex: 1;
+  flex-direction: column;
+  padding: var(--padding-4xs) 0 0;
+  box-sizing: border-box;
+  min-width: 105px;
+}
+.frameGroup,
+.womenWrapper {
+  flex-direction: row;
+}
+.frameGroup {
+  align-self: stretch;
+  border-radius: var(--br-mini);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  padding: var(--padding-lgi) var(--padding-base) var(--padding-9xl)
+    var(--padding-102xl);
+  position: relative;
+  gap: var(--gap-19xl);
+  z-index: 2;
+}
+.womenWrapper {
+  height: 28px;
+  width: 69px;
+  border-radius: var(--br-81xl);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-silver-200);
+  box-sizing: border-box;
+  padding: var(--padding-9xs) var(--padding-3xs);
+}
+.starIcon {
+  height: 24px;
+  width: 24px;
+  position: relative;
+  min-height: 24px;
+}
+.kRating {
+  position: relative;
+  display: inline-block;
+  min-width: 83px;
+}
+.starParent {
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--gap-11xs);
+}
+.frameDiv,
+.frameWrapper,
+.starParent {
+  display: flex;
+  align-items: flex-start;
+}
+.frameWrapper {
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-12xs) 0 0;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-400);
+}
+.frameDiv {
+  align-self: stretch;
+  height: 26px;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  z-index: 2;
+}
+.alveroGown {
+  width: 192px;
+  font-weight: 600;
+  display: inline-block;
+}
+.alveroGown,
+.cartIcon,
+.divine {
+  position: relative;
+  z-index: 2;
+}
+.divine {
+  width: 192px;
+  font-weight: 500;
+  display: inline-block;
+}
+.cartIcon {
+  align-self: stretch;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.cartIconWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-17xl) 0 0;
+  box-sizing: border-box;
+  min-width: 125px;
+}
+.addToCart {
+  position: relative;
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  font-family: var(--font-poppins);
+  color: var(--color-white);
+  text-align: left;
+  display: inline-block;
+  min-width: 113px;
+}
+.cartButtonWrapper {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-3xl) var(--padding-lg);
+  background-color: var(--color-gray-200);
+  border-radius: var(--br-base);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+.cartButtonWrapper:hover {
+  background-color: var(--color-dimgray);
+}
+.alveroGownParent,
+.divineParent,
+.frameParent1 {
+  align-self: stretch;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent1 {
+  flex-direction: row;
+  gap: var(--gap-42xl);
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+}
+.alveroGownParent,
+.divineParent {
+  flex-direction: column;
+}
+.divineParent {
+  gap: var(--gap-9xs);
+  font-size: var(--font-size-lg);
+  color: var(--color-gray-100);
+}
+.alveroGownParent {
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+}
+.frameContainer,
+.loginForm {
+  align-self: stretch;
+  gap: var(--gap-5xl);
+}
+.frameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  color: var(--color-gray-100);
+}
+.loginForm {
+  flex-direction: row;
+  font-size: var(--font-size-xs);
+}
+.collectionHeader,
+.collections,
+.loginForm {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+.collectionHeader {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-44xl);
+}
+.collections {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-60xl) var(--padding-108xl) var(--padding-61xl);
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--font-size-21xl);
+  color: var(--color-gray-300);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 1425px) {
+  .loginForm {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 825px) {
+  .frameParent,
+  .productWrapperParent {
+    flex-wrap: wrap;
+  }
+  .collectionHeader {
+    gap: var(--gap-12xl);
+  }
+  .collections {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-20xl);
+    padding-bottom: var(--padding-64xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .frameGroup,
+  .frameParent,
+  .productWrapperParent {
+    padding-left: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .frameGroup {
+    flex-wrap: wrap;
+    gap: var(--gap-lgi);
+  }
+  .alveroGown,
+  .cartIcon {
+    font-size: var(--font-size-lgi);
+  }
+  .frameParent1 {
+    flex-wrap: wrap;
+    gap: var(--gap-11xl);
+  }
+  .collectionHeader {
+    gap: var(--gap-base);
+  }
+}

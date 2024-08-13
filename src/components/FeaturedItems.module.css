@@ -1,0 +1,56 @@
+.images1Icon {
+  position: absolute;
+  height: calc(100% - 19px);
+  top: 10px;
+  bottom: 9px;
+  left: 30px;
+  max-height: 100%;
+  width: 81px;
+  object-fit: cover;
+}
+.featuredContent {
+  width: 143px;
+  height: 100px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.shoes {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+.seeAllCollections {
+  position: relative;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+  text-align: left;
+}
+.featuredItems,
+.shoesParent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.shoesParent {
+  width: 143px;
+  gap: var(--gap-5xs);
+}
+.featuredItems {
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  padding: var(--padding-5xl) var(--padding-12xl);
+  gap: var(--gap-base);
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 450px) {
+  .shoes {
+    font-size: var(--font-size-lgi);
+  }
+}

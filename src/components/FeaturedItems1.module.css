@@ -1,0 +1,64 @@
+.personalizedBigSizeHumanHeIcon {
+  position: absolute;
+  height: calc(100% - 17px);
+  top: 8px;
+  bottom: 9px;
+  left: 30px;
+  max-height: 100%;
+  width: 83px;
+  object-fit: cover;
+}
+.personalizedBigSizeHumanHeWrapper {
+  align-self: stretch;
+  height: 100px;
+  position: relative;
+  border-radius: var(--br-base);
+  background-color: var(--color-whitesmoke);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.sunglasses {
+  align-self: stretch;
+  position: relative;
+  font-weight: 600;
+}
+.seeAllCollections {
+  position: relative;
+  font-size: var(--font-size-base);
+  color: var(--color-gray-100);
+  text-align: left;
+}
+.sunglassesParent {
+  align-self: stretch;
+  flex-direction: column;
+  gap: var(--gap-5xs);
+}
+.featuredItems,
+.frameParent,
+.sunglassesParent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.frameParent {
+  flex: 1;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.featuredItems {
+  width: 209px;
+  border-radius: var(--br-base);
+  border: 2px solid var(--color-silver-200);
+  box-sizing: border-box;
+  flex-direction: row;
+  padding: var(--padding-5xl) var(--padding-12xl);
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-gray-300);
+  font-family: var(--font-poppins);
+}
+@media screen and (max-width: 450px) {
+  .sunglasses {
+    font-size: var(--font-size-lgi);
+  }
+}
