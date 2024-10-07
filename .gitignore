@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.duckdb
+*.sqlite
+
+# dbt
+dbt_packages/
+dbt_modules/
+target/
+logs/
+.user.yml
+
+# Data files
+data/raw/
+data/seeds/*.csv
+!data/seeds/.gitkeep
+
+# Query results
+query_results/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+.docker/
+
+# Internal plans
+.plans/
