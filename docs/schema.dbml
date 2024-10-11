@@ -1,0 +1,72 @@
+Project ECommerce_DWH {
+  database_type: 'DuckDB'
+  Note: 'star schema, columns match the dbt-built marts'
+}
+
+Table dim_customer {
+  customer_sk varchar [primary key, note: 'md5(customer_id || valid_from)']
+  customer_id bigint [note: 'natural key from source']
+  first_name varchar
+  last_name varchar
+  email varchar
+  city varchar
+  state varchar
+  zip_code varchar
+  customer_tier varchar
+  valid_from timestamp
+  valid_to timestamp
+  is_current boolean
+  Note: 'SCD Type 2'
+}
+
+Table dim_product {
+  product_sk varchar [primary key]
+  product_id bigint
+  seller_id bigint
+  product_name varchar
+  department varchar
+  category varchar
+  price decimal
+  cost decimal
+  is_active boolean
+  Note: 'Type 1 overwrite, no history'
+}
+
+Table dim_seller {
+  seller_sk varchar [primary key]
+  seller_id bigint
+  company_name varchar
+  contact_email varchar
+  rating double
+  joined_date date
+  Note: 'Type 1 overwrite'
+}
+
+Table dim_date {
+  date_sk int [primary key, note: 'YYYYMMDD']
+  full_date date
+  year bigint
+  quarter bigint
+  month bigint
+  day_of_week bigint
+  is_weekend boolean
+}
+
+Table fact_orders {
+  order_sk varchar [primary key]
+  order_id bigint
+  date_sk int
+  customer_sk varchar
+  product_sk varchar
+  seller_sk varchar
+  quantity bigint
+  unit_price decimal
+  discount_amount decimal
+  total_amount decimal
+  order_status varchar
+}
+
+Ref: fact_orders.date_sk > dim_date.date_sk
+Ref: fact_orders.customer_sk > dim_customer.customer_sk
+Ref: fact_orders.product_sk > dim_product.product_sk
+Ref: fact_orders.seller_sk > dim_seller.seller_sk
