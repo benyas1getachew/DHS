@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw_ecommerce
+    schema: main
+    tables:
+      - name: stg_orders
+        loaded_at_field: order_date
+        freshness:
+          warn_after: {count: 12, period: hour}
+          error_after: {count: 24, period: hour}
+      - name: stg_customers
+      - name: stg_products
+      - name: stg_sellers
