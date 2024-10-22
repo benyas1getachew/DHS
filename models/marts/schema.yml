@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: dim_customer
+    description: "customer dimension, scd type 2 (one row per version, is_current flags the live one)"
+    columns:
+      - name: customer_sk
+        description: "surrogate key, md5(customer_id || valid_from)"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "natural key from source"
+        tests:
+          - not_null
+
+  - name: dim_seller
+    description: "seller dimension, type 1 overwrite"
+    columns:
+      - name: seller_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: fact_orders
+    description: "order line item fact"
+    columns:
+      - name: order_sk
+        tests:
+          - unique
+          - not_null
+      - name: customer_sk
+        tests:
+          - relationships:
+              to: ref('dim_customer')
+              field: customer_sk
