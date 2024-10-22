@@ -14,10 +14,28 @@ models:
         tests:
           - not_null
 
+  - name: dim_product
+    description: "product dimension, type 1 overwrite (current price/cost only, no history)"
+    columns:
+      - name: product_sk
+        tests:
+          - unique
+          - not_null
+      - name: product_id
+        tests:
+          - unique
+
   - name: dim_seller
     description: "seller dimension, type 1 overwrite"
     columns:
       - name: seller_sk
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_date
+    columns:
+      - name: date_sk
         tests:
           - unique
           - not_null
@@ -34,3 +52,8 @@ models:
           - relationships:
               to: ref('dim_customer')
               field: customer_sk
+      - name: date_sk
+        tests:
+          - relationships:
+              to: ref('dim_date')
+              field: date_sk
