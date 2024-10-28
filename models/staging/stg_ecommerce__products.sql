@@ -9,8 +9,8 @@ renamed as (
         product_name,
         department,
         category,
-        cast(price as decimal(10,2)) as price,
-        cast(cost as decimal(10,2)) as cost,
+        cast(price as decimal(10,2)) as current_price,
+        cast(cost as decimal(10,2)) as current_cost,
         is_active
     from source
 )
