@@ -8,7 +8,7 @@ select
     product_name,
     department,
     category,
-    price,
-    cost,
+    current_price,
+    current_cost,
     is_active
 from products
