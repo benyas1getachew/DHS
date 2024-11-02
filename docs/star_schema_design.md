@@ -1,13 +1,17 @@
 # Star schema design
 
-How I laid out the dimensional model. Straight Kimball star: one order fact, four
-dimensions, surrogate keys everywhere.
+How I laid out the dimensional model. It's a straight Kimball star: two fact tables,
+four dimensions, surrogate keys everywhere.
 
-## Fact table
+## Fact tables
 
 **fact_orders** is the grain that matters - one row per order line item. Measures
 are `quantity`, `unit_price`, `discount_amount`, and the derived `total_amount`. It
 carries FKs to date, customer, product, and seller.
+
+**fact_daily_sales** rolls orders up to one row per seller per day. It exists so a
+dashboard showing seller performance over time doesn't rescan the whole order fact.
+Measures: `total_orders`, `total_revenue`, `total_items_sold`.
 
 ## Dimensions
 
@@ -17,17 +21,17 @@ This is the SCD Type 2 dimension. City and tier changes create new versions with
 `valid_from`/`valid_to`/`is_current`. See `scd_strategy.md` for the mechanics.
 
 ### dim_product
-`product_name`, `department`, `category`, `price`, `cost`, `is_active`. Type 1
-overwrite, no history. One row per product.
+`product_name`, `department`, `category`, `current_price`, `current_cost`,
+`is_active`. Type 1 overwrite, no history. One row per product.
 
 ### dim_seller
 `company_name`, `contact_email`, `rating`. Type 1.
 
 ### dim_date
-Thinking about a date spine derived from the actual order date range. `date_sk` would
-be the date as a `YYYYMMDD` integer, same as how `fact_orders.date_sk` is computed so
-the join is a plain integer equality. Fields: `year`, `quarter`, `month`,
-`day_of_week`, `is_weekend`.
+Calendar dimension derived from the actual order date range. Has `year`, `quarter`,
+`month`, `day_of_week`, `is_weekend`. `date_sk` is the date as a `YYYYMMDD` integer,
+which is also how `fact_orders.date_sk` is computed so the join is a plain integer
+equality.
 
 ## Keys
 

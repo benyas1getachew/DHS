@@ -26,8 +26,8 @@ Table dim_product {
   product_name varchar
   department varchar
   category varchar
-  price decimal
-  cost decimal
+  current_price decimal
+  current_cost decimal
   is_active boolean
   Note: 'Type 1 overwrite, no history'
 }
@@ -66,7 +66,18 @@ Table fact_orders {
   order_status varchar
 }
 
+Table fact_daily_sales {
+  daily_sales_sk varchar [primary key]
+  date_sk int
+  seller_sk varchar
+  total_orders bigint
+  total_revenue decimal
+  total_items_sold hugeint
+}
+
 Ref: fact_orders.date_sk > dim_date.date_sk
 Ref: fact_orders.customer_sk > dim_customer.customer_sk
 Ref: fact_orders.product_sk > dim_product.product_sk
 Ref: fact_orders.seller_sk > dim_seller.seller_sk
+Ref: fact_daily_sales.date_sk > dim_date.date_sk
+Ref: fact_daily_sales.seller_sk > dim_seller.seller_sk

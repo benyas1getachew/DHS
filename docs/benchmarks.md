@@ -20,3 +20,20 @@ to run. Rerun `python scripts/bench.py` to get your own numbers.
 The running-total file (01) and the rollup/grouping-sets file (06) are the slowest
 because they scan the whole fact table and sort. The recursive CTE is tiny since it
 only walks department -> category (two levels).
+
+## Does the summary table help?
+
+DuckDB has no materialized views, so `src/optimization/summary_tables.sql` builds a
+pre-aggregated `summary_seller_daily` table (same idea as the `fact_daily_sales`
+model). I timed the 7-day rolling-average query both ways:
+
+| Source | ms |
+|--------|-----|
+| straight off fact_orders | ~300 |
+| off summary_seller_daily | ~150 |
+
+So somewhere between 1.2x and 2x depending on the run. The summary table skips the
+group-by over 1.2M rows and reads the ~180k pre-aggregated rows instead. Not the
+order-of-magnitude thing you'd get on a warehouse that bills per byte scanned, but
+DuckDB is fast enough locally that it doesn't dominate. Left it in because it's the
+right shape for when the fact table gets bigger.
