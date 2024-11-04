@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  dbt:
+    build: .
+    volumes:
+      - .:/usr/app
+    environment:
+      - DBT_PROFILES_DIR=.
+    command: >
+      bash -c "dbt docs generate --profiles-dir . && dbt docs serve --port 8080 --profiles-dir ."
+    ports:
+      - "8080:8080"
