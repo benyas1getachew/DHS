@@ -51,3 +51,19 @@ make serve-docs # dbt docs on localhost:8080 via docker
 
 Data generation writes ~1.2M order rows and takes a couple of minutes. The DuckDB
 file and seed CSVs are gitignored.
+
+## Performance notes
+
+`scripts/bench.py` times each query file against the warehouse, see
+`docs/benchmarks.md` for numbers from my laptop (they wander run to run, so run it
+yourself). DuckDB has no materialized views, so `src/optimization/summary_tables.sql`
+builds pre-aggregated summary tables instead. On this dataset the pre-agg is a modest
+win; it'd matter more with a bigger fact table.
+
+## Limitations
+
+DuckDB is great for a local single-file warehouse like this, but in a real setup
+you'd point dbt at Snowflake or BigQuery and let the warehouse handle concurrency
+and scale. The SCD load here also assumes the source hands you clean change events;
+no CDC, no late-arriving dedup beyond an exact-timestamp guard. The date dim has no
+holiday flags. Good enough to practice the modeling; not production.
